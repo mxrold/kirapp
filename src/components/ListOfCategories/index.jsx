@@ -1,4 +1,5 @@
-import { Article, Button } from './styles'
+import { Button } from '../Button'
+import { Article } from './styles'
 
 export const ListOfCategories = () => {
   const categories = [
@@ -36,7 +37,11 @@ export const ListOfCategories = () => {
     <Article>
       {
         categories.map(item => (
-          <Button key={item.id}>{item.name}</Button>
+          <Button 
+            key={item.id} 
+            {...item}
+            height='30px'
+          />
         ))
       }
     </Article>
