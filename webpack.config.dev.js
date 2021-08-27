@@ -7,8 +7,20 @@ module.exports = {
     filename: '[name][contenthash].js'
   },
   devtool: 'source-map',
+  mode: 'development',
   resolve: {
     extensions: ['.js', '.jsx']
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ]
   },
   devServer: {
     static: path.join(__dirname, 'dist'),
