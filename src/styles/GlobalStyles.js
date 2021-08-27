@@ -16,4 +16,10 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background-color: ${Colors.lightGray};
   }
+
+  button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
 `

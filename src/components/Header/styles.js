@@ -24,7 +24,7 @@ export const Logo = styled.h1`
 `
 
 export const Div = styled.div`
-
+  
 `
 
 export const Button = styled.button`
@@ -32,9 +32,6 @@ export const Button = styled.button`
   height: 30px;
   background-color: ${Colors.lightPurple};
   border-radius: 7px;
-  border: none;
-  outline: none;
-  cursor: pointer;
   & svg {
     color: ${Colors.darkPurple};
   }
