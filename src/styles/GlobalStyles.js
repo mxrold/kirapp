@@ -15,6 +15,7 @@ export const GlobalStyles = createGlobalStyle`
 
   ::-webkit-scrollbar {
     width: 6px;
+    height: 6px;
   }
   ::-webkit-scrollbar-track {
     background-color: transparent;

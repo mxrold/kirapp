@@ -25,6 +25,7 @@ export const Tasks = () => {
       description: 'This is a new task',
       date: '01 Oct',
       category: '💡 Technology',
+      completed: true
     },
     {
       id: 2,
@@ -32,6 +33,7 @@ export const Tasks = () => {
       description: 'This is a new task',
       date: '01 Oct',
       category: '💡 Technology',
+      completed: false
     },
     {
       id: 3,
@@ -39,6 +41,7 @@ export const Tasks = () => {
       description: 'This is a new task',
       date: '01 Oct',
       category: '💡 Technology',
+      completed: false
     },
     {
       id: 4,
@@ -46,6 +49,7 @@ export const Tasks = () => {
       description: 'This is a new task',
       date: '01 Oct',
       category: '💡 Technology',
+      completed: false
     },
     {
       id: 5,
@@ -53,6 +57,7 @@ export const Tasks = () => {
       description: 'This is a new task',
       date: '01 Oct',
       category: '💡 Technology',
+      completed: false
     },
     {
       id: 6,
@@ -60,6 +65,7 @@ export const Tasks = () => {
       description: 'This is a new task',
       date: '01 Oct',
       category: '💡 Technology',
+      completed: false
     },
     {
       id: 7,
@@ -67,6 +73,7 @@ export const Tasks = () => {
       description: 'This is a new task',
       date: '01 Oct',
       category: '💡 Technology',
+      completed: false
     },
     {
       id: 8,
@@ -74,6 +81,7 @@ export const Tasks = () => {
       description: 'This is a new task',
       date: '01 Oct',
       category: '💡 Technology',
+      completed: false
     }
   ]
  
@@ -90,7 +98,7 @@ export const Tasks = () => {
           />
           {
             tasks.map(item => (
-              <Card key={item.id}>
+              <Card key={item.id} status={item.completed} >
                 <DivTop>
                   <div>
                     <Title>{item.title}</Title>
@@ -105,7 +113,7 @@ export const Tasks = () => {
                     <Category>{item.category}</Category>
                   </div>
                   <Actions>
-                    <BtnAction hover='#4ECCA3'>
+                    <BtnAction hover='#29BB89' status={item.completed}>
                       <FiCheckSquare size='20px'/>
                     </BtnAction>
                     <BtnAction hover='#F8485E'>

@@ -42,6 +42,10 @@ export const Card = styled.article`
   background-color: ${Colors.white};
   box-shadow: 1px 1px 3px 1px ${Colors.shadow};
   border-radius: 4.5px;
+  ${props => props.status && css `
+    opacity: 0.6;
+    text-decoration: line-through ${Colors.darkPurple};
+  `}
 `
 
 export const DivTop = styled.div`
@@ -72,13 +76,14 @@ export const Date = styled.span`
 export const DivBottom = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   height: max-content;
+  margin-top: 8px;
 `
 
 export const Category = styled.p`
-  display: inherit;
-  align-self: center;
+  font-size: 1.2rem;
+  color: ${Colors.darkGray};
 `
 
 export const Actions = styled.div`
@@ -92,6 +97,9 @@ export const BtnAction = styled.button`
   border-radius: 7px;
   color: ${Colors.mediumGray};
   ${props => props.hover && css`
+    ${props => props.status && css `
+      color: ${props.hover};
+    `}
     &:hover {
       color: ${props.hover};
     }
