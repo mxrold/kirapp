@@ -5,31 +5,31 @@ export const ListOfCategories = () => {
   const categories = [
     {
       id: 1,
-      name: 'category-1'
+      name: '🛒 Category'
     },
     {
       id: 2,
-      name: 'category-2'
+      name: '🛒 Category'
     },
     {
       id: 3,
-      name: 'category-3'
+      name: '🛒 Category'
     },
     {
       id: 4,
-      name: 'category-4'
+      name: '🛒 Category'
     },
     {
       id: 5,
-      name: 'category-5'
+      name: '🛒 Category'
     },
     {
       id: 6,
-      name: 'category-6'
+      name: '🛒 Category'
     },
     {
       id: 7,
-      name: 'category-7'
+      name: '🛒 Category'
     }
   ]
   
@@ -41,6 +41,7 @@ export const ListOfCategories = () => {
             key={item.id} 
             {...item}
             height='30px'
+            marginR='14px'
           />
         ))
       }

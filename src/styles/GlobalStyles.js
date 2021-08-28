@@ -22,4 +22,14 @@ export const GlobalStyles = createGlobalStyle`
     outline: none;
     cursor: pointer;
   }
+
+  #app {
+    width: 100vw;
+    height: 100%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    height: 100vh;
+    overflow: hidden;
+  }
 `
