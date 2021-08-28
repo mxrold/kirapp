@@ -24,15 +24,9 @@ export const Logo = styled.h1`
 `
 
 export const Div = styled.div`
-  
-`
-
-export const Button = styled.button`
-  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
   height: 30px;
-  background-color: ${Colors.lightPurple};
-  border-radius: 7px;
-  & svg {
-    color: ${Colors.darkPurple};
-  }
 `

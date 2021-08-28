@@ -1,5 +1,5 @@
-import { Container, SubContainer, Logo, Div, Button } from "./styles"
-import { FiSearch } from 'react-icons/fi'
+import { Search } from '../Search'
+import { Container, SubContainer, Logo, Div } from "./styles"
 
 export const Header = () => {
   return (
@@ -7,9 +7,7 @@ export const Header = () => {
       <SubContainer>
         <Logo>Todo.</Logo>
         <Div>
-          <Button>
-            <FiSearch size='20px' />
-          </Button>
+          <Search />
         </Div>
       </SubContainer>
     </Container>
