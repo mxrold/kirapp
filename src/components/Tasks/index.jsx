@@ -1,21 +1,5 @@
-import { Button } from '../Button'
-import { 
-  Main, 
-  Section, 
-  List, 
-  Card, 
-  DivTop,
-  Title,
-  Description,
-  ContainerDate,
-  Date,
-  Category,
-  Actions,
-  BtnAction,
-  DivBottom 
-} from './styles'
-import { Colors } from '../../styles/Colors'
-import { FiCheckSquare, FiTrash } from 'react-icons/fi'
+import { ListOfTasks } from '../ListOfTasks'
+import { Main } from './styles'
 
 export const Tasks = () => {
   const tasks = [
@@ -84,48 +68,10 @@ export const Tasks = () => {
       completed: false
     }
   ]
- 
+
   return (
     <Main>
-      <Section>
-        <List>
-          <Button 
-            name='New task'
-            width='width: 50%; min-width: 300px; max-width: 520px'
-            height='45px'
-            bgColor={Colors.darkPurple}
-            textColor={Colors.lightGray}
-          />
-          {
-            tasks.map(item => (
-              <Card key={item.id} status={item.completed} >
-                <DivTop>
-                  <div>
-                    <Title>{item.title}</Title>
-                    <Description>{item.description}</Description>
-                  </div>
-                  <ContainerDate>
-                    <Date>{item.date}</Date>
-                  </ContainerDate>
-                </DivTop>
-                <DivBottom>
-                  <div>
-                    <Category>{item.category}</Category>
-                  </div>
-                  <Actions>
-                    <BtnAction hover='#29BB89' status={item.completed}>
-                      <FiCheckSquare size='20px'/>
-                    </BtnAction>
-                    <BtnAction hover='#F8485E'>
-                      <FiTrash size='20px'/>
-                    </BtnAction>
-                  </Actions>
-                </DivBottom>
-              </Card>
-            ))
-          }
-        </List>
-      </Section>
+      <ListOfTasks tasks={tasks} />
     </Main>
   )
 }
