@@ -13,10 +13,21 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
   }
 
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: ${Colors.mediumGray};
+    border-radius: 50px;
+  }
+
   body {
     background-color: ${Colors.lightGray};
   }
-
+  
   button {
     border: none;
     outline: none;
