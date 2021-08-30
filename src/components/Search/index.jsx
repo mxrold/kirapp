@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { FiSearch } from 'react-icons/fi'
 import { Input, Button } from "./styles"
 
-export const Search = () => {
+export const Search = ({ searchValue, setSearchValue }) => {
   const [isMobile, setIsMobile] = useState(() => {
     if (window.innerWidth > 480) {
       return true
@@ -22,7 +22,7 @@ export const Search = () => {
     isMobile === false ? setShowInput(!showInput) : setShowInput(false)
   }
 
-  console.log('primer estado', isMobile)
+  const handleSearchValue = event => setSearchValue(event.target.value)
 
   return (
     <>
@@ -31,6 +31,8 @@ export const Search = () => {
         open={showInput}
         type="text" 
         placeholder="Search tasks" 
+        value={searchValue}
+        onChange={handleSearchValue}
       />
       <Button onClick={handleShowInput} >
         <FiSearch size='20px' />
