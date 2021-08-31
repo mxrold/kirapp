@@ -3,16 +3,19 @@ import { TaskItem } from '../TaskItem'
 import { Section, List } from './styles'
 import { Colors } from '../../styles/Colors'
 
-export const ListOfTasks = ({ tasks }) => {
+export const ListOfTasks = ({ tasks, completed }) => {
+
+  const handleStylesButton = (completeTask, newTask) => completed ? completeTask : newTask
+
   return (
-    <Section>
+    <Section layout={completed}>
       <List>
         <Button 
-          name='New task'
+          name={handleStylesButton(`Completed (${tasks.length})`, 'New task')}
           width='width: 50%; min-width: 300px; max-width: 520px'
           height='45px'
-          bgColor={Colors.darkPurple}
-          textColor={Colors.lightGray}
+          bgColor={handleStylesButton(Colors.lightPurple, Colors.darkPurple)}
+          textColor={handleStylesButton(Colors.darkPurple, Colors.lightGray)}
         />
         {
           tasks.map(item => (

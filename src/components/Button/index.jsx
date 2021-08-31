@@ -2,7 +2,7 @@ import { Btn } from './styles'
 
 export const Button = ({ name, width, height, marginR, bgColor, textColor }) => {
   return (
-    <Btn 
+    <Btn
       width={width && width} 
       height={height && height} 
       marginR={marginR && marginR}

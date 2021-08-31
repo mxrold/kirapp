@@ -4,7 +4,7 @@ import { Colors } from '../../styles/Colors'
 export const Card = styled.article`
   width: 100%;
   min-width: 300px;
-  max-width: 520px;
+  max-width: 680px;
   @media (min-width: 780px) {
     width: 50%;
   };

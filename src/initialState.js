@@ -13,7 +13,7 @@ export const tasks = [
     description: 'This is a new task',
     date: '02 Oct',
     category: '💡 Technology',
-    completed: false
+    completed: true
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const tasks = [
     description: 'This is a new task',
     date: '04 Oct',
     category: '💡 Technology',
-    completed: false
+    completed: true
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const tasks = [
     description: 'This is a new task',
     date: '05 Oct',
     category: '💡 Technology',
-    completed: false
+    completed: true
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export const tasks = [
     description: 'This is a new task',
     date: '06 Oct',
     category: '💡 Technology',
-    completed: false
+    completed: true
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export const tasks = [
     description: 'This is a new task',
     date: '07 Oct',
     category: '💡 Technology',
-    completed: false
+    completed: true
   },
   {
     id: 8,
@@ -61,6 +61,6 @@ export const tasks = [
     description: 'This is a new task',
     date: '08 Oct',
     category: '💡 Technology',
-    completed: false
+    completed: true
   }
 ]
