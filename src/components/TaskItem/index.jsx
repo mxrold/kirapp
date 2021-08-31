@@ -12,7 +12,8 @@ import {
 } from './styles'
 import { FiCheckSquare, FiTrash } from 'react-icons/fi'
 
-export const TaskItem = ({ id, completed, title, description, date, category }) => {
+export const TaskItem = (props) => {
+  const { id, completed, title, description, date, category, onComplete, onDelete } = props
   return (
     <Card status={completed} >
       <DivTop>
@@ -29,10 +30,10 @@ export const TaskItem = ({ id, completed, title, description, date, category }) 
           <Category>{category}</Category>
         </div>
         <Actions>
-          <BtnAction hover='#29BB89' status={completed}>
+          <BtnAction onClick={onComplete} hover='#29BB89' status={completed}>
             <FiCheckSquare size='20px'/>
           </BtnAction>
-          <BtnAction hover='#F8485E'>
+          <BtnAction onClick={onDelete} hover='#F8485E'>
             <FiTrash size='20px'/>
           </BtnAction>
         </Actions>

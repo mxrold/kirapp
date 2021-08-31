@@ -3,7 +3,21 @@ import { TaskItem } from '../TaskItem'
 import { Section, List } from './styles'
 import { Colors } from '../../styles/Colors'
 
-export const ListOfTasks = ({ tasks, completed }) => {
+export const ListOfTasks = ({ tasks, completed, listTasks, setListTasks }) => {
+  const handleCompleteTodo = id => {
+    const todoIndex = listTasks.findIndex(todo => todo.id === id)
+    const newTodos = [...listTasks]
+    const statusTodo = newTodos[todoIndex].completed
+    newTodos[todoIndex].completed = !statusTodo
+    setListTasks(newTodos)
+  }
+
+  const handleDeleteTodo = id => {
+    const todoIndex = listTasks.findIndex(todo => todo.id === id)
+    const newTodos = [...listTasks]
+    alert('Do you want to delete this todo?', newTodos.splice(todoIndex, 1))
+    setListTasks(newTodos)
+  }
 
   const handleStylesButton = (completeTask, newTask) => completed ? completeTask : newTask
 
@@ -19,7 +33,12 @@ export const ListOfTasks = ({ tasks, completed }) => {
         />
         {
           tasks.map(item => (
-            <TaskItem key={item.id} {...item} />
+            <TaskItem 
+              key={item.id} 
+              {...item} 
+              onComplete={() => handleCompleteTodo(item.id)}
+              onDelete={() => handleDeleteTodo(item.id)}
+            />
           ))
         }
       </List>
