@@ -3,7 +3,7 @@ import { TaskItem } from '../TaskItem'
 import { Section, List } from './styles'
 import { Colors } from '../../styles/Colors'
 
-export const ListOfTasks = ({ tasks, completed, listTasks, setListTasks }) => {
+export const ListOfTasks = ({ tasks, emptyNewTasks, completed, listTasks, setListTasks }) => {
   const handleCompleteTodo = id => {
     const todoIndex = listTasks.findIndex(todo => todo.id === id)
     const newTodos = [...listTasks]
@@ -22,7 +22,7 @@ export const ListOfTasks = ({ tasks, completed, listTasks, setListTasks }) => {
   const handleStylesButton = (completeTask, newTask) => completed ? completeTask : newTask
 
   return (
-    <Section layout={completed}>
+    <Section layout={emptyNewTasks}>
       <List>
         <Button 
           name={handleStylesButton(`Completed (${tasks.length})`, 'New task')}

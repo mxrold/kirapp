@@ -41,7 +41,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   @media screen and (min-width: 780px) {
-    height: 100vh;
-    overflow: hidden;
+    #app {
+      height: 100vh;
+      overflow-x: hidden;
+    }
   }
 `
