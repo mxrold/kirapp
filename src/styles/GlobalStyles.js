@@ -36,6 +36,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   #app {
+    position: relative;
     width: 100vw;
     height: 100%;
   }
