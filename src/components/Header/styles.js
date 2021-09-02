@@ -17,10 +17,8 @@ export const SubContainer = styled.div`
   margin: 0 auto;
 `
 
-export const Logo = styled.h1`
-  font-size: 3rem;
-  font-weight: 700;
-  color: ${Colors.darkGray};
+export const Logo = styled.img`
+  margin-top: -4px;
 `
 
 export const Div = styled.div`

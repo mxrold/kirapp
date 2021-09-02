@@ -10,7 +10,10 @@ export const Input = styled.input`
     display: block;
   `}
   z-index: 1;
-  width: 220px;
+  width: 160px;
+  @media (min-width: 480px) {
+    width: 220px;
+  }
   height: 30px;
   margin-right: 6px;
   padding-left: 9px;
