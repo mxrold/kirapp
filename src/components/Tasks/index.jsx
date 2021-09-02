@@ -4,8 +4,7 @@ import { TodoForm } from '../TodoForm'
 import { ListOfTasks } from '../ListOfTasks'
 import { Main } from './styles'
 
-export const Tasks = ({ tasks = [] }) => {
-  const [listTasks, setListTasks] = useState(tasks)
+export const Tasks = ({ listTasks = [], setListTasks }) => {
   const [openModal, setOpenModal] = useState(false)
 
   const newTasks = listTasks.filter(item => !item.completed)

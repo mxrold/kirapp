@@ -6,8 +6,8 @@ import { Tasks } from "./components/Tasks"
 import { tasks } from './initialState'
 
 export const App = () => {
+  const [listTasks, setListTasks] = useState(tasks)
   const [searchValue, setSearchValue] = useState('')
-  const listTasks = tasks
 
   const filteredTasks = useMemo(() => 
     listTasks.filter((item) => {
@@ -23,7 +23,7 @@ export const App = () => {
       <GlobalStyles />
       <Header searchValue={searchValue} setSearchValue={setSearchValue} />
       <SubHeader />
-      <Tasks tasks={filteredTasks} />
+      <Tasks listTasks={filteredTasks} setListTasks={setListTasks} />
     </>
   )
 }
